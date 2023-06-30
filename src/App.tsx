@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import Place from "./components/Place";
+import PlaceData from "./components/PlaceData";
 
 function App(): JSX.Element {
   return (
     <>
       <Header />
-      <Place
+      <PlaceData
         title="The Grand Canyon"
         placeName="Arizona"
         countryName="USA"
