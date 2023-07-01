@@ -1,19 +1,28 @@
 import Header from "./components/Header";
-import PlaceData from "./components/PlaceData";
+import Place from "./components/Place";
+import PlaceSection from "./components/PlaceSection";
+import placeArray from "./placeArray";
+import PlaceObject from "./types";
+
+
+function createPlaceSection(placeObject: PlaceObject) {
+  return <PlaceSection
+    title= {placeObject.title}
+    placeName= {placeObject.placeName}
+    countryName= {placeObject.countryName}
+    img= {placeObject.img}
+    altMsg= {placeObject.altMsg}
+    mapLink= {placeObject.mapLink}
+    description= {placeObject.description}
+  />
+}
 
 function App(): JSX.Element {
+
   return (
     <>
       <Header />
-      <PlaceData
-        title="The Grand Canyon"
-        placeName="Arizona"
-        countryName="USA"
-        img="/img/grand-canyon.jpg"
-        altMsg="The Grand Canyon"
-        mapLink="https://www.google.com/maps/place/Grand+Canyon+Village,+AZ+86023,+USA/@36.0518713,-112.1987788,12z/data=!4m6!3m5!1s0x8733174f95ffe325:0xb8ccc2749a229ea1!8m2!3d36.0544445!4d-112.1401108!16zL20vMHFueHI?entry=ttu"
-        description="The Grand Canyon is a steep-sided canyon carved by the Colorado River in Arizona, United States."
-      />
+      {placeArray.map(createPlaceSection)}
     </>
   );
 }
