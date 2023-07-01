@@ -8,7 +8,7 @@ interface Place {
   description: string;
 }
 
-function PlaceData(props: Place): JSX.Element {
+function PlaceSection(props: Place): JSX.Element {
   return (
     <>
       <img src={props.img} alt={props.altMsg} width={500} height={600} />
@@ -22,4 +22,4 @@ function PlaceData(props: Place): JSX.Element {
   );
 }
 
-export default PlaceData;
+export default PlaceSection;
