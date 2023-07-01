@@ -1,4 +1,4 @@
-interface Place {
+interface PlaceElement {
   title: string;
   placeName: string;
   countryName: string;
@@ -8,7 +8,7 @@ interface Place {
   description: string;
 }
 
-function Place(props: Place): JSX.Element {
+function Place(props: PlaceElement): JSX.Element {
   return (
     <>
       <img src={props.img} alt={props.altMsg} width={500} height={600} />
